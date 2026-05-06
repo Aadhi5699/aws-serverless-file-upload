@@ -1,0 +1,49 @@
+# Node.js dependencies
+node_modules/
+
+# AWS Serverless packaging artifacts
+.serverless/
+
+# Environment files
+*.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Optional coverage directory
+coverage/
+
+# Lockfiles for alternate package managers
+package-lock.json
+pnpm-lock.yaml
+
+# Ignore build artifacts
+dist/
+build/
+
+# Backend function artifacts
+backend/**/node_modules/
+backend/**/package-lock.json
+backend/**/yarn.lock
+backend/**/pnpm-lock.yaml
