@@ -9,8 +9,7 @@ export const handler = async (event) => {
 
         const command = new PutObjectCommand({
             Bucket: "upload-bucket-7678",
-            Key: fileName,
-            ContentType: "image/jpeg"
+            Key: fileName
         });
 
         const url = await getSignedUrl(s3, command, { expiresIn: 300 });
