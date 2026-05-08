@@ -25,4 +25,4 @@ User -> API Gateway -> Upload Lambda -> Pre-Signed URL -> S3 Upload Bucket -> S3
 - Least privilege IAM
 
 ## Architecture Diagram
-![Architecture Diagram](infrastructure\architecture_diagram.png)
+![Architecture Diagram](infrastructure/architecture_diagram.png)
