@@ -3,12 +3,14 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 const s3 = new S3Client({ region: "ap-south-1" });
 
+const UPLOAD_BUCKET_NAME = process.env.UPLOAD_BUCKET_NAME;
+
 export const handler = async (event) => {
     try {
         const fileName = `uploads/${Date.now()}-${Math.random().toString(36).substring(7)}.jpg`;
 
         const command = new PutObjectCommand({
-            Bucket: "upload-bucket-7678",
+            Bucket: UPLOAD_BUCKET_NAME,
             Key: fileName
         });
 

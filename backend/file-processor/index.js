@@ -16,7 +16,8 @@ const sns = new SNSClient({
     region: "ap-south-1"
 });
 
-const TOPIC_ARN = "arn:aws:sns:ap-south-1:050366487790:file-processing-topic";
+const TOPIC_ARN = process.env.SNS_TOPIC_ARN;
+const PROCESSED_BUCKET_NAME = process.env.PROCESSED_BUCKET_NAME;
 
 export const handler = async (event) => {
 
@@ -32,7 +33,7 @@ export const handler = async (event) => {
             record.s3.object.key.replace(/\+/g, " ")
         );
 
-        const destinationBucket = "processed-bucket-6785";
+        const destinationBucket = PROCESSED_BUCKET_NAME;
 
         const destinationKey = `processed-${sourceKey}`;
 
