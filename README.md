@@ -23,6 +23,7 @@ User -> API Gateway -> Upload Lambda -> Pre-Signed URL -> S3 Upload Bucket -> S3
 - SNS email notifications
 - CloudWatch alarms
 - Least privilege IAM
+- File upload restrictions by type and size
 
 ## Architecture Diagram
 ![Architecture Diagram](infrastructure/architecture_diagram.png)
